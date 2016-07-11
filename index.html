@@ -10,17 +10,22 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h2>Your Game of Thrones Charater Name Generator</h2>
-      <h4>Click here to generate your name!</h4>
-    </div>
-    <div class="container" ng-model="CharaterCreate">
 
+    <div class="container">
+      <h2>Your Game of Thrones House Generator</h2>
+      <h4>Click to find out which house you belong to!</h4>
+    </div>
+    <div class="container" ng-controller="CharaterCreateCtrl">
+      <form class="" action="index.html" method="post" ng-submit="createName">
+        <input type="text" ng-model="character.addCharacter" placeholder="Your Name">
+      </form>
     </div>
     <div class="container" ng-controller="CharacterIndexCtrl as character">
       <h5>You belong to: {{ characters.name }}</h5>
       <br>
-      <input type="button" ng-submit="getCharacter();" value="Click for Mashup!" class="btn">
+      <form ng-submit="search()">
+        <input type="submit" value="Click for House!" class="btn">
+      </form>
     </div>
   </body>
 </html>
