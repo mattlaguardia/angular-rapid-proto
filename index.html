@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="characterMashupApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Your Game of Thrones Charater Name Generator</h2>
+      <h4>Click here to generate your name!</h4>
+    </div>
+    <div class="container" ng-model="CharaterCreate">
+
+    </div>
+    <div class="container" ng-controller="CharacterIndexCtrl as character">
+      You belong to: {{ characters.name }}
+      <br>
+      <input type="button" ng-submit="getCharacter();" value="Click for Mashup!" class="btn">
+    </div>
+  </body>
+</html>
